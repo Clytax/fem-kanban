@@ -1,0 +1,167 @@
+{
+  "boards": [
+    {
+      "name": "Example Board",
+      "id": 1,
+      "active": true,
+      "columns": [
+        {
+          "name": "todo",
+          "color": "#fff333",
+          "id": 1,
+          "boardID": 1,
+          "tasks": [
+            {
+              "name": "Clean your Room",
+              "id": 1,
+              "boardID": 1,
+              "columnID": 1,
+              "description": "Clean",
+              "subTasks": [
+                {
+                  "name": "Clean Bed",
+                  "id": 1,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 1,
+                  "isDone": true
+                },
+                {
+                  "name": "Clean Desk",
+                  "id": 2,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 1,
+                  "isDone": true
+                },
+                {
+                  "name": "Clean FloorClean Floor",
+                  "id": 3,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 1,
+                  "isDone": false
+                }
+              ]
+            },
+            {
+              "name": "Do your Homework",
+              "id": 2,
+              "boardID": 1,
+              "columnID": 1,
+              "description": "It's truly and otherly disgusting",
+              "subTasks": [
+                {
+                  "name": "Math",
+                  "id": 7,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 2,
+                  "isDone": false
+                },
+                {
+                  "name": "English",
+                  "id": 8,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 2,
+                  "isDone": true
+                },
+                {
+                  "name": "History",
+                  "id": 9,
+                  "boardID": 1,
+                  "columnID": 1,
+                  "taskID": 2,
+                  "isDone": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "in progress",
+          "id": 2,
+          "color": "#44ffff",
+          "boardID": 1,
+          "tasks": [
+            {
+              "name": "Research pricing points of various competitors and trial different business models",
+              "id": 3,
+              "boardID": 1,
+              "columnID": 2,
+              "description": "We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.",
+              "subTasks": [
+                {
+                  "name": "Math",
+                  "id": 4,
+                  "boardID": 1,
+                  "columnID": 2,
+                  "taskID": 3,
+                  "isDone": true
+                },
+                {
+                  "name": "English",
+                  "id": 5,
+                  "boardID": 1,
+                  "columnID": 2,
+                  "taskID": 3,
+                  "isDone": true
+                },
+                {
+                  "name": "History",
+                  "id": 6,
+                  "boardID": 1,
+                  "columnID": 2,
+                  "taskID": 3,
+                  "isDone": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "done",
+          "color": "#44ff44",
+          "id": 3,
+          "boardID": 1,
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "name": "Example Board 2",
+      "id": 2,
+      "active": false,
+      "columns": [
+        {
+          "name": "todo",
+          "color": "#fff333",
+          "id": 4,
+          "boardID": 2,
+          "tasks": []
+        },
+        {
+          "name": "In progress",
+          "color": "#44ffff",
+          "id": 5,
+          "boardID": 2,
+          "tasks": []
+        },
+        {
+          "name": "done",
+          "color": "#44ff44",
+          "id": 6,
+          "boardID": 2,
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "name": "Example Board 3",
+      "id": 3,
+      "active": false,
+      "columns": []
+    }
+  ]
+}

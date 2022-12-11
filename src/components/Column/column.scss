@@ -1,0 +1,58 @@
+// Column
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  min-width: 17.5em;
+}
+.column-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 0.85em;
+}
+.column__empty {
+  width: 40px;
+  height: 40px;
+}
+.f-column-title {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-hs);
+  letter-spacing: var(--cs-hs);
+  color: var(--clr-text-accent);
+  text-transform: uppercase;
+}
+
+.column__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.f-column-new {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-hxl);
+  color: var(--clr-text-accent);
+
+  &:hover {
+    color: var(--clr-primary);
+  }
+}
+
+.bg-new-column {
+  background: linear-gradient(
+    180deg,
+    var(--clr-new-column-start) 0%,
+    var(--clr-new-column-end) 100%
+  );
+
+  border-radius: 6px;
+
+  &:hover {
+    .f-column-new {
+      color: var(--clr-primary);
+    }
+  }
+}

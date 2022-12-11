@@ -1,0 +1,39 @@
+// Task
+.f-task-title {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-m);
+  color: var(--clr-text);
+
+  &:hover {
+    color: var(--clr-primary);
+  }
+}
+
+.f-task-subtitle {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-bm);
+  color: var(--clr-text-accent);
+}
+
+.bg-task {
+  background-color: var(--clr-bg-header);
+  box-shadow: var(--shadow-task);
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+    .f-task-title {
+      color: var(--clr-primary);
+    }
+  }
+}
+
+.task {
+  padding: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 280px;
+}

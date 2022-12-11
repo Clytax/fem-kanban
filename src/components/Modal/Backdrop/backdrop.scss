@@ -1,0 +1,18 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #0000007c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  z-index: 9999;
+}
+
+.mobile-backdrop {
+  top: 64px;
+  height: calc(100% - 64px);
+}

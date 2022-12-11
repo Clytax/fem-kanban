@@ -1,0 +1,47 @@
+.subtask {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 12px;
+  gap: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.subtask-bg__done {
+  background-color: var(--clr-bg-screen);
+}
+
+.subtask-bg__not-done {
+  background-color: var(--clr-bg-subtask-not-completed);
+}
+
+.subtask__title-done {
+  color: var(--clr-text-subtask-done);
+  text-decoration: line-through;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.subtask__title-not-done {
+  font-weight: bold;
+  color: var(--clr-text);
+
+  font-size: 12px;
+}
+
+.subtask__name {
+  line-height: 2px;
+}
+
+.subtask__checkbox {
+  background: #000;
+  border-radius: 2px;
+  overflow: hidden;
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    accent-color: var(--clr-primary);
+  }
+}

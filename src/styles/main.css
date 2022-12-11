@@ -1,0 +1,225 @@
+:root {
+  /* Font Sizes */
+  --fs-100: 0.75rem; /* 12px bm */
+  --fs-200: 0.8125rem; /* 13px bl */
+  --fs-300: 0.9375rem; /* 15px hm */
+  --fs-400: 1.125rem; /* 18px hl */
+  --fs-800: 1.125rem; /* 18px hxl */
+
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --ff-jakarta: "Plus Jakarta Sans", sans-serif;
+
+  --lh-hxl: 30px;
+  --lh-hl: 23px;
+  --lh-m: 19px;
+  --lh-hs: 15px;
+  --lh-bl: 23px;
+  --lh-bm: 15px;
+
+  --cs-hs: 2.4px;
+
+  /* Shadow */
+
+  --shadow-task: 0px 4px 6px rgba(54, 78, 126, 0.101545);
+  --shadow-modal: 0px 10px 20px rgba(54, 78, 126, 0.25);
+  /* COLORS */
+  --clr-primary: #635fc7;
+  --clr-primary-hover: #a8a4ff;
+
+  --clr-destructive: #ea5555;
+  --clr-destructive-hover: #ff9898;
+
+  --clr-btn-secondary: #625fc721;
+  --clr-btn-secondary-hover: #625fc70a;
+
+  --clr-sidebar-board-hover: #625fc71e;
+
+  --clr-input-border: 1px solid #828fa340 !important;
+
+  /* Background */
+  --clr-bg-empty-screen: #ffffff;
+  --clr-bg-screen: #f4f7fd;
+  --clr-bg-header: #ffffff;
+
+  --clr-bg-subtask-not-completed: #625fc74b;
+
+  --clr-new-column-start: #e9effa8e;
+  --clr-new-column-end: #e9effa2c;
+
+  --clr-bg-theme-switcher: #f4f7fd;
+  --clr-bg-header-modal: #ffffff;
+  --clr-bg-sidebar: #ffffff;
+
+  /* Text */
+  --clr-neutral-100: #ffffff;
+
+  --clr-text-subtask-head: #828fa3;
+
+  --clr-text: #000112;
+  --clr-active-board-text: #ffffff;
+  --clr-text-accent: #828fa3;
+
+  --clr-text-subtask-done: #00000042;
+
+  --clr-lines: #e4ebfa;
+
+  /* Scrollbar */
+  --clr-thumb: #e4ebfa;
+  --clr-thumb-hover: #c7d1e8;
+  /* Extra */
+  --br-l: 24px;
+  --br-s: 20px;
+
+  --br-task: 8px;
+
+  /* Spacing */
+}
+
+[data-theme="dark"] {
+  /* Background */
+  --clr-bg-empty-screen: #20212c;
+  --clr-bg-screen: #20212c;
+  --clr-bg-header: #2b2c37;
+  --clr-bg-sidebar: #2b2c37;
+
+  --clr-sidebar-board-hover: #ffffff;
+  --clr-bg-header-modal: #2b2c37;
+  --clr-bg-theme-switcher: #20212c;
+
+  --clr-text-subtask-head: #ffffff;
+
+  --clr-btn-secondary: #ffffff;
+  --clr-btn-secondary-hover: #ffffff;
+
+  --clr-new-column-start: #2b2c3775;
+  --clr-new-column-end: #2b2c3721;
+
+  /* Scrollbar */
+  --clr-thumb: #2b2c37;
+  --clr-thumb-hover: #37383f;
+
+  /* Text */
+  --clr-text: #ffffff;
+  --clr-text-subtask-done: #ffffff48;
+  --clr-lines: #3e3f4e;
+}
+
+.app,
+html {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Utility  */
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+/* Tablet */
+@media screen and (min-width: 34em) {
+  /* 480px */
+  :root {
+    --fs-800: 1.25em;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 48em) {
+  /* 768px */
+  :root {
+    --fs-800: 1.5em;
+  }
+}
+
+html,
+body {
+  font-family: var(--ff-jakarta);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--clr-bg-header-modal);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-thumb);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-thumb-hover);
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

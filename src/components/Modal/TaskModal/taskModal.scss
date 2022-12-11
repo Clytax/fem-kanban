@@ -1,0 +1,145 @@
+//  View Task
+.view-task {
+  background-color: var(--clr-bg-header);
+  border-radius: 6px;
+  width: min(95%, 480px);
+  padding: 2em;
+  display: flex;
+
+  flex-direction: column;
+  gap: 1.5em;
+  cursor: auto;
+}
+.view-task__header__title {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-hl);
+  color: var(--clr-text);
+}
+.view-task__description {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-hl);
+  color: var(--clr-text-accent);
+}
+.modal__subtask-error-message {
+  position: absolute;
+  right: 17%;
+  font-size: var(--fs-200);
+  color: var(--clr-destructive);
+}
+
+.view-task__status {
+  p {
+    color: var(--clr-text-subtask-head);
+    font-size: var(--fs-100);
+    font-weight: bold;
+  }
+}
+
+.status {
+  color: var(--clr-text-subtask-head);
+  font-size: var(--fs-100);
+  font-weight: bold;
+}
+.addtask-error-message {
+  color: var(--clr-destructive);
+  position: absolute;
+  font-size: var(--fs-200);
+  right: 16%;
+}
+.view-task__subtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  p {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-subtask-head);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+.view-task__header {
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+// Add task Modal
+.addtask-modal {
+  width: clamp(35vw, 480px, 95vw);
+  background: var(--clr-bg-header);
+  padding: 2em;
+  display: flex;
+  gap: 1.5em;
+  border-radius: 6px;
+  flex-direction: column;
+
+  h2 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-400);
+    line-height: var(--lh-hl);
+    color: var(--clr-text);
+  }
+}
+.input-area {
+  resize: vertical;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.85em 1em !important;
+
+  max-height: 112px;
+}
+
+.add-task__status {
+  p {
+    color: var(--clr-text);
+  }
+}
+
+.modal__subtask {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.modal__subtasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  h3 {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-subtask-head);
+  }
+}
+
+.modal__subtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.edit-task-modal {
+  width: clamp(35vw, 480px, 95vw);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: var(--clr-bg-header);
+  border-radius: 6px;
+  padding: 2em;
+
+  h2 {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-hl);
+    color: var(--clr-text);
+  }
+}

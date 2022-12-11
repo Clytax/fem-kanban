@@ -1,0 +1,115 @@
+.action-board {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  background: var(--clr-bg-header);
+  border-radius: var(--br-task);
+  width: clamp(40vw, 480px, 100vw);
+  gap: 1.5em;
+  margin: 0 1em;
+
+  h1 {
+    color: var(--clr-destructive);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-hl);
+  }
+
+  p {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-bl);
+    color: var(--clr-text-accent);
+  }
+}
+
+.action-board__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.edit-modal__head {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-hl);
+  color: var(--clr-text);
+}
+.action-board__confirm {
+  background-color: var(--clr-destructive);
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  border-radius: var(--br-s);
+
+  &:hover {
+    background-color: var(--clr-destructive-hover);
+  }
+}
+
+.action-board__cancel {
+  background-color: var(--clr-btn-secondary);
+  color: var(--clr-primary);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  border-radius: var(--br-s);
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--clr-btn-secondary-hover);
+  }
+}
+
+.edit-board-modal {
+  display: flex;
+  flex-direction: column;
+  width: clamp(40vw, 480px, 100vw);
+  background-color: var(--clr-bg-header);
+}
+
+.edit-board__column {
+  width: 100%;
+  gap: 1em;
+  display: flex;
+}
+.edit-board__columns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.edit-board__column {
+  position: relative;
+}
+.edit-board__columns-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.editboard-error-message {
+  position: absolute;
+  right: 11%;
+  color: var(--clr-destructive) !important;
+  font-size: var(--fs-200);
+  top: 16%;
+}
+
+@media screen and (min-width: 38em) {
+  .action-board__buttons {
+    flex-direction: row;
+    gap: 1em;
+  }
+}
