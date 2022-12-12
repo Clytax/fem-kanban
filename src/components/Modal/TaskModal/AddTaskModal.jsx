@@ -5,20 +5,13 @@ import Backdrop from "../Backdrop/Backdrop";
 
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import modalSlice, {
-  closeAllModals,
-  openModal,
-} from "../../../features/global/modalSlice";
-import boardSlice, { addTask } from "../../../features/boards/boardSlice";
+import { closeAllModals } from "../../../features/global/modalSlice";
+import { addTask } from "../../../features/boards/boardSlice";
 
 import { ReactComponent as Cross } from "../../../assets/Icons/icon-cross.svg";
 
 import { dropIn } from "../../../utils/framer-animations";
-import { useEffect } from "react";
-/**
- * @todo ADD failure cases
- * @returns
- */
+
 const AddTaskModal = () => {
   const dispatch = useDispatch();
   const [openDropdown, setOpenDropdown] = useState(false);

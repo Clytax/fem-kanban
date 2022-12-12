@@ -83,6 +83,8 @@
   color: var(--clr-primary);
   background-color: var(--clr-btn-secondary);
   font-weight: bold;
+  z-index: 999;
+  position: relative;
 
   &:hover {
     background-color: var(--clr-btn-secondary-hover);

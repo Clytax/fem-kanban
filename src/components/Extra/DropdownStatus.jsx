@@ -1,15 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./dropdown.scss";
 import { useDispatch, useSelector } from "react-redux";
-import boardSlice, { changeTaskColumn } from "../../features/boards/boardSlice";
-import {
-  closeAllModals,
-  closeViewTaskModal,
-} from "../../features/global/modalSlice";
+import { changeTaskColumn } from "../../features/boards/boardSlice";
+import { closeViewTaskModal } from "../../features/global/modalSlice";
 
 const DropdownStatus = ({ task }) => {
   const [openDropDown, setOpenDropDown] = useState(false);
-  const [columns, setColumns] = useState([]);
   const dispatch = useDispatch();
   const boards = useSelector((state) => state.boards.boards);
   const board = boards.find((board) => board.id === task.boardID);

@@ -1,17 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
-import { useSelector, useDispatch } from "react-redux";
-import modalSlice, {
-  openDeleteBoardModal,
-  openClearBoardModal,
-  closeAllModals,
-  openModal,
-} from "../../features/global/modalSlice";
+import { useDispatch } from "react-redux";
+import { openModal } from "../../features/global/modalSlice";
 import "./DropdownSettings.scss";
-const DropdownSettings = ({ isOpen, setClose, screen, elipsisRef }) => {
+const DropdownSettings = ({ isOpen, setClose, elipsisRef }) => {
   const dispatch = useDispatch();
-  const deleteBoardModal = useSelector((state) => state.modal.deleteBoardModal);
-
   const handleMobileSettings = () => {
     // Make sure clicked isnt the elipsis
     setClose(false);

@@ -1,18 +1,14 @@
 import React, { useState, useRef } from "react";
 import "./header.scss";
 import { useMediaQuery } from "react-responsive";
-import { AnimatePresence } from "framer-motion";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import boardSlice, { findActiveBoard } from "../../features/boards/boardSlice";
-import themeSlice from "../../features/theme/themeSlice";
-import sidebarSlice from "../../features/global/sidebarSlice";
+import { findActiveBoard } from "../../features/boards/boardSlice";
 
 // Components
 import HeaderModal from "../Modal/HeaderModal/HeaderModal";
 
 // Hooks
-import { useOutsideClick } from "../../hooks/useOutsideClick";
 
 // Icons
 import { ReactComponent as Elips } from "../../assets/Icons/icon-vertical-ellipsis.svg";
@@ -28,10 +24,7 @@ import { openModal } from "../../features/global/modalSlice";
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const isMobileMax = useMediaQuery({ maxWidth: 650 });
-  const isMobileMin = useMediaQuery({ minWidth: 651 });
-  const isTabletUp = useMediaQuery({ minWidth: 651 });
   const tabletButton = useMediaQuery({ maxWidth: 773 });
-  const isDesktopUp = useMediaQuery({ minWidth: 992 });
 
   const [elipsisMobileOpen, setElipsisMobileOpen] = useState(false);
   const [elipsisDesktopOpen, setElipsisDesktopOpen] = useState(false);
@@ -41,7 +34,6 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
-  const boards = useSelector((state) => state.boards.boards);
   const activeBoard = useSelector(findActiveBoard);
   const sidebar = useSelector((state) => state.sidebar);
   const close = () => setModalOpen(false);

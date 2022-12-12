@@ -1,10 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "./taskModal.scss";
 import { ReactComponent as Elipsis } from "../../../assets/Icons/icon-vertical-ellipsis.svg";
-import { ReactComponent as Close } from "../../../assets/Icons/icon-chevron-up.svg";
-import { ReactComponent as Open } from "../../../assets/Icons/icon-chevron-down.svg";
 import { useSelector, useDispatch } from "react-redux";
-import modalSlice, {
+import {
   closeViewTaskModal,
   openEditTaskModal,
   closeAllModals,
@@ -13,26 +11,24 @@ import modalSlice, {
 import Backdrop from "../Backdrop/Backdrop";
 import Subtask from "../../Task/Subtask";
 
-import { useDetectClickOutside } from "react-detect-click-outside";
-
 import "../../Extra/DropdownSettings.scss";
 
 import { useOutsideClick } from "../../../hooks/useOutsideClick";
 
 import { motion } from "framer-motion";
 import DropdownStatus from "../../Extra/DropdownStatus";
-import DropdownSettings from "../../Extra/DropdownSettings";
-import DropdownSettingsTask from "../../Extra/DropdownSettingsTask";
 
 const ViewTaskModal = ({ handleClose }) => {
   const [openSettings, setOpenSettings] = useState(false);
   const dispatch = useDispatch();
   const task = useSelector((state) => state.modal.viewTaskModal.task);
+  const handleCloseSettings = () => {
+    console.log("hi");
+    setOpenSettings(false);
+  };
 
-  const modal = useSelector((state) => state.modal);
-  const viewTaskModal = useSelector((state) => state.modal.viewTaskModal);
-  const elipsisRef = useRef();
-  const wrapperRef = useRef(null);
+  const elipsisRef = useRef(null);
+  const wrapperRef = useOutsideClick(handleCloseSettings, elipsisRef);
 
   const getFinishedSubTasks = () => {
     let finishedSubTasks = 0;
@@ -44,9 +40,6 @@ const ViewTaskModal = ({ handleClose }) => {
     return finishedSubTasks;
   };
 
-  const handleCloseSettings = () => {
-    setOpenSettings(false);
-  };
   const closeModal = () => {
     dispatch(closeViewTaskModal());
   };
@@ -67,6 +60,7 @@ const ViewTaskModal = ({ handleClose }) => {
             <div
               className="view-task__header__icon"
               style={{ cursor: "pointer" }}
+              ref={elipsisRef}
               onClick={() => {
                 setOpenSettings(!openSettings);
               }}

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useOutsideClick } from "../../hooks/useOutsideClick";
+import React from "react";
 import "./DropdownSettings.scss";
 const DropdownSettingsTask = ({ isOpen, setClose, screen, elipsisRef }) => {
   return (

@@ -1,8 +1,7 @@
 import React from "react";
 import "./subtask.scss";
 import { useSelector, useDispatch } from "react-redux";
-import boardSlice, { toggleSubTask } from "../../features/boards/boardSlice";
-import { useEffect } from "react";
+import { toggleSubTask } from "../../features/boards/boardSlice";
 const Subtask = ({ subtaskID, columnID, boardID, taskID }) => {
   const dispatch = useDispatch();
   const boards = useSelector((state) => state.boards);

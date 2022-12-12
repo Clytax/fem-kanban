@@ -63,6 +63,8 @@ export const modalSlice = createSlice({
     },
     openEditTaskModal: (state, action) => {
       state.editTaskModal.open = true;
+
+      console.log("action.payload: ", action.payload);
       state.editTaskModal.task = action.payload;
     },
     openDeleteTaskModal: (state, action) => {

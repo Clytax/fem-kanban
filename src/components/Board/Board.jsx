@@ -3,14 +3,11 @@ import "./board.scss";
 import { motion } from "framer-motion";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
-import boardSlice, {
-  reorderTaskDragDrop,
-} from "../../features/boards/boardSlice";
-import modalSlice, {
+import { reorderTaskDragDrop } from "../../features/boards/boardSlice";
+import {
   closeAllModals,
   closeViewTaskModal,
   openModal,
-  toggleViewTaskModal,
 } from "../../features/global/modalSlice";
 import Sidebar from "../Sidebar/Sidebar";
 import Column from "../Column/Column";
@@ -19,7 +16,7 @@ import AddTaskModal from "../Modal/TaskModal/AddTaskModal";
 import AddBoardModal from "../Modal/BoardModal/AddBoardModal";
 import EditBoardModal from "../Modal/BoardModal/EditBoardModal";
 import EditTaskModal from "../Modal/TaskModal/EditTaskModal";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { DragDropContext } from "react-beautiful-dnd";
 import ViewTaskModal from "../Modal/TaskModal/ViewTaskModal";
 
 const Board = () => {

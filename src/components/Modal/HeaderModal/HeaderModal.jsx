@@ -3,9 +3,9 @@ import Backdrop from "../Backdrop/Backdrop";
 import { motion } from "framer-motion";
 import "./headerModal.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setTheme, toggleTheme } from "../../../features/theme/themeSlice";
+import { setTheme } from "../../../features/theme/themeSlice";
 import { setActiveBoard } from "../../../features/boards/boardSlice";
-import { closeAllModals, openModal } from "../../../features/global/modalSlice";
+import { openModal } from "../../../features/global/modalSlice";
 import Switch from "../../Switch/Switch";
 
 import { dropIn } from "../../../utils/framer-animations";
@@ -79,22 +79,7 @@ const HeaderModal = ({ handleClose }) => {
             <h3 className="f-header-modal__new-board">+ Create New Board</h3>
           </div>
         </div>
-        <div className="sidebar__account" style={{ flexDirection: "column" }}>
-          <NavLink
-            to="/login"
-            className="sidebar__account__login flex"
-            style={{ width: "80%", justifyContent: "center " }}
-          >
-            <h3 className="f-sidebar__account">Login</h3>
-          </NavLink>
-          <NavLink
-            to="/register"
-            className="sidebar__account__signup flex"
-            style={{ width: "80%", justifyContent: "center " }}
-          >
-            <h3 className="f-sidebar__account">Sign Up</h3>
-          </NavLink>
-        </div>
+
         <div className="header-modal__themes">
           <div className="header-modal__theme">
             <Sun />

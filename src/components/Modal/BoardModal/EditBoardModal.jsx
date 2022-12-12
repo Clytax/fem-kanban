@@ -1,15 +1,12 @@
 import React from "react";
 import "./boardModal.scss";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  closeEditBoardModal,
-  closeAllModals,
-} from "../../../features/global/modalSlice";
+import { closeAllModals } from "../../../features/global/modalSlice";
 import { randomHexColor } from "../../../features/boards/boardHelper";
 import { nanoid } from "@reduxjs/toolkit";
-import boardSlice, { editBoard } from "../../../features/boards/boardSlice";
+import { editBoard } from "../../../features/boards/boardSlice";
 import { motion } from "framer-motion";
-import { badSuspension, dropIn } from "../../../utils/framer-animations";
+import { dropIn } from "../../../utils/framer-animations";
 import Backdrop from "../Backdrop/Backdrop";
 import "./boardModal.scss";
 import { useState } from "react";
@@ -40,7 +37,6 @@ const EditBoardModal = () => {
     setColumns([...columns, newColumn]);
   };
 
-  const handleColumnChange = (e, index) => {};
   const submitEditBoard = () => {
     let dontSubmit = false;
     setNameError(false);

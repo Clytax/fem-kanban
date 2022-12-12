@@ -65,6 +65,8 @@ const EditTaskModal = () => {
       setErrorSubtaskIndex(errorSubtaskIndex.filter((i) => i !== index));
     }
   };
+
+  console.log(task);
   const handleDeleteSubtask = (e, index) => {
     e.preventDefault();
 

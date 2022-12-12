@@ -6,11 +6,7 @@ import {
   clearBoard,
   deleteTask,
 } from "../../../features/boards/boardSlice";
-import modalSlice, {
-  closeAllModals,
-  closeClearBoardModal,
-  closeDeleteBoardModal,
-} from "../../../features/global/modalSlice";
+import { closeAllModals } from "../../../features/global/modalSlice";
 import { motion } from "framer-motion";
 import { newspaper } from "../../../utils/framer-animations";
 import Backdrop from "../Backdrop/Backdrop";
@@ -19,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 const ActionBoardModal = ({ action }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const deleteBoardModal = useSelector((state) => state.modal.deleteBoardModal);
   const activeBoard = useSelector((state) =>
     state.boards.boards.find((board) => board.active === true)
   );

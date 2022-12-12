@@ -3,7 +3,7 @@ import "./column.scss";
 
 import Task from "../Task/Task";
 
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { Droppable } from "react-beautiful-dnd";
 
 const Column = ({ column, boardID, colIndex }) => {
   return (

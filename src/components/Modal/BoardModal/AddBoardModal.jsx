@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import Backdrop from "../Backdrop/Backdrop";
-import { useDispatch, useSelector } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { dropIn } from "../../../utils/framer-animations";
 import { addBoard } from "../../../features/boards/boardSlice";
-import modalSlice, {
-  openModal,
-  closeAllModals,
-} from "../../../features/global/modalSlice";
+import { closeAllModals } from "../../../features/global/modalSlice";
 import "./addboardmodal.scss";
 
 import { ReactComponent as Cross } from "../../../assets/Icons/icon-cross.svg";
