@@ -37,6 +37,22 @@
   }
 }
 
+.view-task__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  p {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-subtask-head);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
 .status {
   color: var(--clr-text-subtask-head);
   font-size: var(--fs-100);

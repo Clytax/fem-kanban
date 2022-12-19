@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import "./taskModal.scss";
 import { ReactComponent as Elipsis } from "../../../assets/Icons/icon-vertical-ellipsis.svg";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+
 import { useSelector, useDispatch } from "react-redux";
 import {
   closeViewTaskModal,
@@ -44,15 +47,18 @@ const ViewTaskModal = ({ handleClose }) => {
     dispatch(closeViewTaskModal());
   };
   return (
-    <Backdrop onClick={closeModal} mobile={false}>
-      <motion.div
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-        onMouseDown={(e) => {
-          e.stopPropagation();
-        }}
+    <Modal closeModal={closeModal} open={true} onClose={closeModal}>
+      <Box
         className="view-task"
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          border: "none",
+          // Remove outline on focus
+          outline: "none",
+        }}
       >
         <div className="view-task__header | flex">
           <h2 className="view-task__header__title">{task.name}</h2>
@@ -113,8 +119,8 @@ const ViewTaskModal = ({ handleClose }) => {
           <p>Current Status</p>
           <DropdownStatus click={handleCloseSettings} task={task} />
         </div>
-      </motion.div>
-    </Backdrop>
+      </Box>
+    </Modal>
   );
 };
 

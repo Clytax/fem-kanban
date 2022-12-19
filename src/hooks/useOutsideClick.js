@@ -4,6 +4,7 @@ export const useOutsideClick = (callback, exclude) => {
 
   React.useEffect(() => {
     const handleClick = (e) => {
+      console.log("outside");
       if (
         ref.current &&
         !ref.current.contains(e.target) &&
